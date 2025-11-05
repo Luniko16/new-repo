@@ -560,7 +560,6 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({
             </div>
           </section>
         )}
-        </div>
       </div>
     </div>
   );
