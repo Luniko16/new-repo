@@ -208,7 +208,7 @@ export class ExportService {
       pdf.line(margin, yPosition, margin + 40, yPosition);
       yPosition += 8;
 
-      resumeData.references.forEach((ref, index) => {
+      resumeData.references.forEach((ref) => {
         checkPageBreak(20);
         
         // Reference Name
