@@ -22,6 +22,12 @@ A modern, AI-powered resume builder that helps users create professional, custom
 - **Executive Classic**: Traditional, elegant design for senior positions
 - **Customizable**: Adjust colors, fonts, and layout elements
 
+### References Section
+- **Professional References**: Add and manage professional references with full contact details
+- **Relationship Types**: Former Manager, Colleague, Client, Professor, Mentor options
+- **Export Integration**: References included in all export formats (PDF, Word, HTML)
+- **Form Validation**: Complete validation for contact information
+
 ### Intelligent Assistance
 - **Real-time Suggestions**: Smart recommendations as you build your resume
 - **Industry Best Practices**: Built-in guidance for resume optimization
@@ -50,8 +56,8 @@ A modern, AI-powered resume builder that helps users create professional, custom
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd ai-resume-builder
+   git clone https://github.com/Luniko16/new-repo.git
+   cd new-repo
    ```
 
 2. **Install dependencies**
@@ -65,7 +71,7 @@ A modern, AI-powered resume builder that helps users create professional, custom
    ```
 
 4. **Open in browser**
-   Navigate to `http://localhost:3000`
+   Navigate to `http://localhost:5173`
 
 ## 🏗️ Build for Production
 
@@ -80,16 +86,21 @@ npm run preview
 src/
 ├── components/           # React components
 │   ├── forms/           # Form components for each resume section
+│   │   ├── PersonalInfoForm.tsx
+│   │   ├── ExperienceForm.tsx
+│   │   ├── EducationForm.tsx
+│   │   ├── SkillsForm.tsx
+│   │   └── ReferencesForm.tsx  # NEW: References management
 │   ├── Header.tsx       # Navigation header
 │   ├── ResumeBuilder.tsx # Main builder interface
 │   ├── ResumePreview.tsx # Live resume preview
 │   └── TemplateSelector.tsx # Template selection
 ├── services/            # Business logic and utilities
 │   ├── aiService.ts     # AI content generation
-│   ├── exportService.ts # Export functionality
+│   ├── exportService.ts # Export functionality (updated with references)
 │   └── storageService.ts # Local storage management
 ├── types/               # TypeScript type definitions
-│   └── resume.ts        # Resume data structures
+│   └── resume.ts        # Resume data structures (updated with references)
 ├── data/                # Static data and defaults
 │   └── defaults.ts      # Default templates and data
 └── App.tsx              # Main application component
@@ -117,12 +128,18 @@ src/
 - Categorize skills (Technical, Soft Skills, Languages)
 - Set proficiency levels for each skill
 
-### 5. Template Selection
+### 5. References (NEW)
+- Add professional references with complete contact information
+- Select relationship type (Former Manager, Colleague, etc.)
+- Edit and delete references as needed
+- References automatically included in exports
+
+### 6. Template Selection
 - Choose from professional templates
 - Customize colors and fonts
 - Preview changes in real-time
 
-### 6. Export Options
+### 7. Export Options
 - Download as PDF for applications
 - Export to Word for further editing
 - Generate HTML for web portfolios
@@ -151,6 +168,7 @@ Each template includes:
 - Customizable color schemes
 - Font selection options
 - Responsive design elements
+- References section styling
 
 ### Styling
 - Tailwind CSS for utility-first styling
